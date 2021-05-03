@@ -10,7 +10,6 @@
 	<munit:config name="newone-test-suite.xml" />
 	<munit:test name="newone-test-suite-newoneFlowTest" doc:id="c2d8c4f1-f2fc-45f7-a7bc-3fe141934c4f" description="Test">
 		<munit:execution >
-			<munit:set-null-payload doc:name="Set null payload" doc:id="f0092c62-de1c-410b-9307-ca4883b0e3ed" />
 			<flow-ref doc:name="Flow-ref to newoneFlow" doc:id="4d3b25f2-1eaf-4b36-baae-689a02ed816e" name="newoneFlow"/>
 		</munit:execution>
 		<munit:validation >

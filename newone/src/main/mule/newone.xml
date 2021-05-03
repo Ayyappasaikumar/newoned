@@ -8,7 +8,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
 	<flow name="newoneFlow" doc:id="d0c3ec36-0656-4acb-a93b-4c79c101c028" >
-		<http:listener doc:name="Listener" doc:id="b36f0256-f4c1-499b-a9c9-1a223ed95386" path="/newone" config-ref="HTTP_Listener_config" allowedMethods="GET"/>
+		<http:listener doc:name="Listener" doc:id="b36f0256-f4c1-499b-a9c9-1a223ed95386" path="/newones" config-ref="HTTP_Listener_config" allowedMethods="GET"/>
 		<set-payload value='#["hi dummy"]' doc:name="Set Payload" doc:id="deb57c0e-3960-4be0-996f-dcd53ba07831" />
 	</flow>
 </mule>

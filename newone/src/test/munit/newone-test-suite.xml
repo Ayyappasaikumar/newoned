@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="newone-test-suite.xml" />
+	<munit:test name="newone-test-suite-newoneFlowTest" doc:id="c2d8c4f1-f2fc-45f7-a7bc-3fe141934c4f" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to newoneFlow" doc:id="4d3b25f2-1eaf-4b36-baae-689a02ed816e" name="newoneFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-equals doc:name="Assert equals" doc:id="84a64547-5de0-4a4a-8df3-b5cf25e9d367" actual="#[payload]" expected='#["hi dummy"]' message="passed the test"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="newone-test-suite-newoneFlowTest1" doc:id="68c1178e-781f-47f6-b32a-3a376f3a7aa2" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to newoneFlow" doc:id="8975cbe2-3413-4a35-b689-b47a5b8843d3" name="newoneFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="86365749-1295-4bff-a3a2-3f63e7fefd4c" is="#[MunitTools::notNullValue()]" message="failed excuetion" expression="#[payload]"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
